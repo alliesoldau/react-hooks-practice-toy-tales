@@ -1,7 +1,7 @@
 import React from "react";
 import ToyCard from "./ToyCard";
 
-function ToyContainer({ toyData, deleteToy }) {
+function ToyContainer({ toyData, deleteToy, handleUpdateLikes }) {
 
   const toyDataCollection = toyData.map((toy) => {
     return (
@@ -9,6 +9,7 @@ function ToyContainer({ toyData, deleteToy }) {
         key={toy.id}
         toy={toy}
         deleteToy={deleteToy}
+        handleUpdateLikes={handleUpdateLikes}
       />
     )
   })
