@@ -22,6 +22,11 @@ function App() {
     setToyData([...toyData, newToy]);
   }
 
+  function deleteToy(toyRIP) {
+    const updatedToys=toyData.filter((toy) => toy.id !== toyRIP.id)
+    setToyData(updatedToys);
+  }
+
   return (
     <>
       <Header />
@@ -31,6 +36,7 @@ function App() {
       </div>
       <ToyContainer 
         toyData={toyData}
+        deleteToy={deleteToy}
       />
     </>
   );

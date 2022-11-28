@@ -1,13 +1,14 @@
 import React from "react";
 import ToyCard from "./ToyCard";
 
-function ToyContainer({ toyData }) {
+function ToyContainer({ toyData, deleteToy }) {
 
   const toyDataCollection = toyData.map((toy) => {
     return (
       <ToyCard
         key={toy.id}
         toy={toy}
+        deleteToy={deleteToy}
       />
     )
   })
